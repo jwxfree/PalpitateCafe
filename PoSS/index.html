@@ -1,0 +1,264 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAFE POS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container mt-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="/PalpitateCafe/landingPage/res/transparent-logo.png" width="150" height="105" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav navpages">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">CASHIER1</a>
+                        <div class="status-circle"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- POSS CONTAINER -->
+    <div class="container receipt" tabindex="0"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- LEFT SIDE TRAY -->
+            <div class="col-lg-4 boughtItem-tray">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <p>Item Name</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>Quantity</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p>Price</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p>Subtotal</p>
+                    </div>
+                    
+                </div>
+                <hr />
+                <div class="row ms-1">
+                    <div class="col-lg-5 boughtItem">
+                        <p></p>
+                    </div>
+                    <div class="col-lg-3 text-center boughtQty">
+                        <p></p>
+                    </div>
+                    <div class="col-lg-2 boughtPrice">
+                        <p></p>
+                    </div>
+                    <div class="col-lg-2 boughtSubtotal">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE TRAY -->
+            <div class="col-md-6 menu-tray">
+                <p style="font-weight: 900; color: rgb(102, 51, 37)">ALL PRODUCTS</p>
+                <hr />
+                <div class="menuCards row">
+                    <h5 style="font-weight: 800; color: rgb(190, 190, 190);">ICE COLD DRINKS</h5>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center" onclick="addItem('AMERICANO', 85)">
+                            <div class="card-body">
+                                <h5 class="card-title">AMERICANO</h5>
+                                <p class="card-text">PRICE: 85</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center" onclick="addItem('CHOCO HAZELNUT', 120)">
+                            <div class="card-body">
+                                <h5 class="card-title">CHOCO HAZELNUT</h5>
+                                <p class="card-text">PRICE: 120</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center" onclick="addItem('MATCHA LATTE', 120)">
+                            <div class="card-body">
+                                <h5 class="card-title">MATCHA LATTE</h5>
+                                <p class="card-text">PRICE: 120</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center" onclick="addItem('DIRTY MATCHA', 120)">
+                            <div class="card-body">
+                                <h5 class="card-title">DIRTY MATCHA</h5>
+                                <p class="card-text">PRICE: 120</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center" onclick="addItem('VANILLA MATCHA', 120)">
+                            <div class="card-body">
+                                <h5 class="card-title">VANILLA MATCHA</h5>
+                                <p class="card-text">PRICE: 120</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center" onclick="addItem('CAPPUCCINO', 120)">
+                            <div class="card-body">
+                                <h5 class="card-title">CAPPUCCINO</h5>
+                                <p class="card-text">PRICE: 120</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center" onclick="addItem('COFFEE JELLY', 110)">
+                            <div class="card-body">
+                                <h5 class="card-title">COFFEE JELLY</h5>
+                                <p class="card-text">PRICE: 110</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('WHITE CHOCO', 110)">
+                            <div class="card-body">
+                                <h5 class="card-title">WHITE CHOCO</h5>
+                                <p class="card-text">PRICE: 110</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <hr class="mt-4 mb-4">
+                    <h5 style="font-weight: 800; color: rgb(190, 190, 190);">SPECIAL BARISTA BLEND</h5>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('MOCHA LATTE', 110)">
+                            <div class="card-body">
+                                <h5 class="card-title">MOCHA LATTE</h5>
+                                <p class="card-text">PRICE: 110</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('SALTED CARAMEL', 110)">
+                            <div class="card-body">
+                                <h5 class="card-title">SALTED CARAMEL</h5>
+                                <p class="card-text">PRICE: 110</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('TOFFEE LATTE', 110)">
+                            <div class="card-body">
+                                <h5 class="card-title">TOFFEE LATTE</h5>
+                                <p class="card-text">PRICE: 110</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('TOFFEE ALMOND', 120)">
+                            <div class="card-body">
+                                <h5 class="card-title">TOFFEE ALMOND</h5>
+                                <p class="card-text">PRICE: 120</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('ALMOND LATTE', 110)">
+                            <div class="card-body">
+                                <h5 class="card-title">ALMOND LATTE</h5>
+                                <p class="card-text">PRICE: 110</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('ALMOND CHEESEAKE', 120)">
+                            <div class="card-body">
+                                <h5 class="card-title">ALMOND CHEESECAKE</h5>
+                                <p class="card-text">PRICE: 120</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('CHEESECAKE LATTE', 110)">
+                            <div class="card-body">
+                                <h5 class="card-title">CHEESECAKE LATTE</h5>
+                                <p class="card-text">PRICE: 110</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('WHITECHOCO MATCHA', 130)">
+                            <div class="card-body">
+                                <h5 class="card-title">WHITECHOCO MATCHA</h5>
+                                <p class="card-text">PRICE: 130</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('VANILLA CARAMEL BSL', 130)">
+                            <div class="card-body">
+                                <h5 class="card-title">VANILLA CARAMEL BSL</h5>
+                                <p class="card-text">PRICE: 130</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('HAZELNUT W/ BSL', 130)">
+                            <div class="card-body">
+                                <h5 class="card-title">HAZELNUT W/ BSL</h5>
+                                <p class="card-text">PRICE: 130</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('STRAWBERRY COFFEE', 130)">
+                            <div class="card-body">
+                                <h5 class="card-title">STRAWBERRY COFFEE</h5>
+                                <p class="card-text">PRICE: 130</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mt-2 mb-2">
+                        <div class="card" style="width: 8vw; text-align: center; " onclick="addItem('STRAWBERRY MATCHA', 130)">
+                            <div class="card-body">
+                                <h5 class="card-title">STRAWBERRY MATCHA</h5>
+                                <p class="card-text">PRICE: 130</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <hr style="margin: 2vh 0 2vh 0" />
+                    <h5 class="orderTotal">TOTAL: </h5>
+                    <button class="paymentButton" onclick="displayReceipt()">PAY</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>

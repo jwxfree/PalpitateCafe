@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@100;200;300;400;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
+
+}
+
+.body-text {
+    margin: 14% auto 0 30%; 
+    width: 80%; 
+    text-align: center;
+}
+
+.btHead {
+    font-size: 8vw; 
+    font-family: 'Anton', sans-serif;
+    color: rgb(102, 51, 37);
+ 
+}
+
+.btSub {
+    margin-top: -1vh;
+}
+
+.btBG {
+    
+    background-image: url(/PalpitateCafe/landingPage/res/index-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.navpages {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(102, 51, 37) !important;
+}
+
+.socmed-line {
+    width: 6%; 
+    height: 1px;
+    border: 1px solid rgb(102, 51, 37);
+    margin:  -10vh 0 0 90vw;
+    max-width: 80%;
+}
+
+.socmed-icons{
+    margin:  -1.2% 0 0 75%;
+    
+
+}
+.cafePros {
+    margin: 24vh 0 12vh 0;
+}
+
+.borderCafePros {
+    max-width: 80%; 
+    border-radius: 6px;
+    margin: 4%; 
+    padding: 2%;
+    text-align: center;
+    box-shadow: -1px 1px 44px -13px rgba(0, 0, 0, 0.38);
+}
+.borderCafePros h2 {
+    font-family: 'Anton', sans-serif;
+}
+.prosIMG {
+    margin: 10% auto; 
+}
+
+.cafeProsHead{
+    color: rgb(102, 51, 37) !important;
+    margin: 0 0 3% 38.5%;
+    font-weight: 700;
+}
+.cafeProsSub{
+    max-width: 60%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: -2% 0 9% 19.5%;
+}
+
+/* ABOUT PAGE */
+.btBG2{
+    position: absolute;
+    background-image: url(/PalpitateCafe/landingPage/res/index-bg2.png);
+    background-image: linear-gradient(to right, white);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    inset: 207% 0 0 -40%;
+    opacity: 50%;
+    z-index: -1;
+    
+}
+.about-cafe{
+    position: relative;
+    inset: 0 0 0 8vw;
+    margin: 45vh 0 12vh 0;
+    max-width: 10%;
+    font-weight: 600;
+}
+.readmoreBtn{
+    background-color: rgb(102, 51, 37);
+    color: white;
+    border-radius: 40px;
+    border: none;
+    padding: 1em;
+    width: 10vw;
+    font-weight: 600;
+    box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+}
+.readmoreBtn:hover{
+    background-color: rgb(121, 60, 42);
+}
+.about-img-Rside{
+    margin: -35vh 0 0 45vw;
+    width: 50vw;
+    height: auto;
+}
+
+.line-about{
+    position: absolute;
+    width: 34.4%; 
+    height: 1px;
+    border: 1px solid rgb(102, 51, 37);
+    margin:  25vh 0 0 65vw;
+    
+}
+.btBG-about{
+    position: absolute;
+    background-image: url(/PalpitateCafe/landingPage/res/subindex-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 85vh;
+    
+
+}
+.btBGside-about{
+    position: absolute;
+    background-image: url(/PalpitateCafe/landingPage/res/about-sideIMG.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    inset: 175vh 0 0 0;
+}
+.about-content{
+    padding: 20.5vh 0 0 0;
+    margin: 0 0 0 40vw;
+}
+/* 1 */
+.storeContainer {
+    margin: 4vh 0 0 0;
+
+}
+.storePlaceIMG {
+    border: none;
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+}
+.storePlaceLine{
+    position: absolute;
+    width: 26.4%; 
+    height: 1px;
+    border: 1px solid rgb(228, 228, 228);
+    margin: -1.7vh 0 0 12vw;
+}
+
+/* 2 */
+.storeContainer2 {
+    margin: 8vh 0 0 0;
+}
+.storePlaceIMG2 {
+    border: none;
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+}
+.storePlaceLine2{
+    position: absolute;
+    width: 26.4%; 
+    height: 1px;
+    border: 1px solid rgb(228, 228, 228);
+    margin: -1.7vh 0 0 12vw;
+}
+
+/* 3 */
+.storeContainer3 {
+    margin: 8vh 0 0 0;
+}
+.storePlaceIMG3 {
+    border: none;
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+}
+.storePlaceLine3{
+    position: absolute;
+    width: 26.4%; 
+    height: 1px;
+    border: 1px solid rgb(228, 228, 228);
+    margin: -1.7vh 0 0 12vw;
+}
+
+/* 4 */
+.storeContainer4 {
+    margin: 8vh 0 0 0;
+}
+.storePlaceIMG4 {
+    border: none;
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+}
+.storePlaceLine4{
+    position: absolute;
+    width: 26.4%; 
+    height: 1px;
+    border: 1px solid rgb(228, 228, 228);
+    margin: -1.7vh 0 0 12vw;
+}
+
+/* 5 */
+.storeContainer5 {
+    margin: 8vh 0 0 0;
+}
+.storePlaceIMG5 {
+    border: none;
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.49);
+}
+.storePlaceLine5{
+    position: absolute;
+    width: 26.4%; 
+    height: 1px;
+    border: 1px solid rgb(228, 228, 228);
+    margin: -1.7vh 0 0 12vw;
+}
+
+/* Menu page */
+.btBGside-menu{
+    position: absolute;
+    background-image: url(/PalpitateCafe/landingPage/res/about-sideIMG.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200vh;
+    inset: 18vh 0 0 73vw;
+    z-index: -1;
+}
+.btBGside-menu2{
+    position: absolute;
+    background-image: url(/PalpitateCafe/landingPage/res/cup-coffee-Rside.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60%;
+    inset: 168vh 0 0 48vw;
+    z-index: -1;
+}
+.btBGside-menu3{
+    position: absolute;
+    background-image: url(/PalpitateCafe/landingPage/res/subindex-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60vh;
+    inset: 285vh 0 0 0vw;
+    z-index: -1;
+}
+.menu-content{
+    padding: 20.5vh 0 0 0;
+    margin: 0 0 10vh 50vw;
+    
+}
+/* 1 */
+.menu-box{
+    margin: 0 0 10vh 0;
+    
+}
+.menuList1 ul{
+    font-weight: 800;
+    color: rgb(102, 51, 37);
+    border: none;
+    border-radius: 20px;
+    padding: 10%;
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    list-style-type: none;
+    display: block;
+    column-count: 2;
+    column-gap: 10%; 
+}
+.price1{
+    text-align: center;
+    font-weight: 800;
+}
+/* 2 */
+.menu-box2{
+    position: relative;
+    inset: -1.5vh 0 0 35vw;
+    margin: 0 0 10vh 0;
+   
+    
+}
+.menuList2 ul{
+    font-weight: 800;
+    color: rgb(102, 51, 37);
+    border: none;
+    border-radius: 20px;
+    padding: 10%;
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    list-style-type: none;
+    display: block;
+    column-count: 2;
+    column-gap: 0%; 
+    
+}
+.price2 {
+    text-align: center;
+    font-weight: 800;
+
+}
+
+/* 3 */
+.menu-box3{
+    margin: 0 0 10vh 0;
+    
+}
+.menuList3 ul{
+    font-weight: 800;
+    color: rgb(102, 51, 37);
+    border: none;
+    border-radius: 20px;
+    padding: 10%;
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    list-style-type: none;
+    display: block;
+    column-count: 1;
+    column-gap: 40%; 
+}
+.price3{
+    text-align: left;
+    font-weight: 800;
+
+}
+/* 4 */
+.menu-box4{
+    position: relative;
+    inset: -1.5vh 0 0 35vw;
+    margin: 0 0 10vh 0;
+   
+    
+}
+.menuList4 ul{
+    font-weight: 800;
+    color: rgb(102, 51, 37);
+    border: none;
+    border-radius: 20px;
+    padding: 10%;
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    list-style-type: none;
+    display: block;
+    column-count: 2;
+    column-gap: 0%; 
+    
+}
+.price4 {
+    text-align: center;
+    font-weight: 800;
+
+}
+/* FIFTH MENU */
+.menu-box5{
+    margin: 0 0 10vh 0;
+    
+}
+.menuList5 ul{
+    font-weight: 800;
+    color: rgb(102, 51, 37);
+    border: none;
+    border-radius: 20px;
+    padding: 10%;
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    list-style-type: none;
+    display: block;
+    column-count: 2;
+    column-gap: 10%; 
+}
+.price5{
+    text-align: center;
+    font-weight: 800;
+}
+
+/* SIXTH MENU */
+.menu-box6{
+    position: relative;
+    inset: -1.5vh 0 0 35vw;
+    margin: 0 0 10vh 0;
+   
+    
+}
+.menuList6 ul{
+    font-weight: 800;
+    color: rgb(102, 51, 37);
+    border: none;
+    border-radius: 20px;
+    padding: 10%;
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    list-style-type: none;
+    display: block;
+    column-count: 2;
+    column-gap: 0%; 
+    
+}
+.price6{
+    text-align: center;
+}
+
+/* 7TH */
+.menu-box7{
+    margin: 0 0 10vh 0;
+    
+}
+.menuList7 ul{
+    font-weight: 800;
+    color: rgb(102, 51, 37);
+    border: none;
+    border-radius: 20px;
+    padding: 10%;
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    list-style-type: none;
+    display: block;
+    column-count: 2;
+    column-gap: 10%; 
+}
+.price7{
+    text-align: center;
+}
+
+/* 8TH */
+.menu-box8{
+    position: relative;
+    inset: -1.5vh 0 0 35vw;
+    margin: 0 0 10vh 0;
+   
+    
+}
+.menuList8 ul{
+    font-weight: 800;
+    color: rgb(102, 51, 37);
+    border: none;
+    border-radius: 20px;
+    padding: 10%;
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.41);
+    list-style-type: none;
+    display: block;
+    column-count: 2;
+    column-gap: 0%; 
+    
+}
+.price8{
+    text-align: center;
+}
+
+
+/* CONTACT PAGE */
+.contact-content{
+    padding: 20.5vh 0 0 0;
+    margin: 0 0 10vh 42vw;
+}
+
+.accordion-button {
+    color: rgb(102, 51, 37) !important;
+    font-weight: 800;
+    font-size: 1em !important;
+    border-radius: 10px !important;
+    
+}
+.accordion-button::after{
+    background-color: none;
+}
+.accordion-button:not(.collapsed){
+    background-color: rgb(102, 51, 37) !important;
+    color: white !important;
+}
+.accordion-item{
+   border: none !important;
+}
+
+.contactSubBtn{
+    background-color: rgb(102, 51, 37);
+    color: white;
+    border-radius: 40px;
+    border: none;
+    padding: 1em;
+    width: 10vw;
+    font-weight: 600;
+    
+}
+
+
+/* FOOTER */
+.footer{
+    background-color: #FBFBFB;
+    margin: 25vh 0 0 0;
+    padding: 3vh 0 4vh 0;
+    
+}
+.footerLogo{
+    margin: 0 0 0 16vw;
+}
+.footer-socmed{
+    margin: 0 0 5vh 0;
+}
+.subForm{
+    padding: 9vh 0 0 0;
+}
+
+.subBtn{
+    background-color: rgb(102, 51, 37);
+    color: white;
+    border-radius: 40px;
+    border: none;
+    padding: 1em;
+    width: 10vw;
+    font-weight: 600;
+    margin: -5.8vh 0 0 18vw;
+}
+.subBtn:hover{
+    background-color: rgb(121, 60, 42);
+}
+/* FOOTER SUB-INDEX */
+.footer-subindex{
+    position: relative;
+    inset: 350vh 0 0 0;
+    padding: 3vh 0 4vh 0;
+    background-color: #FBFBFB;
+}
+
+
+
+/* Media Query for small devices */
+@media screen and (max-width: 768px) {
+    
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+    .body-text {
+        width: 50%;
+    }
+
+    .btHead {
+        font-size: 10vw;
+    }
+
+    .socmed-line {
+        width: 10%;
+    }
+
+    .borderCafePros {
+        max-width: 50%;
+    }
+    .socmed-icons{
+        margin:  -1.2% 0 0 70%;
+        
+    
+    }
+
+    .cafeProsSub{
+        max-width: 100%;
+       
+    }
+
+
+}
+
+/* PLACEHOLDER */
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: black !important;
+    font-weight: 300;
+}
