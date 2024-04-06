@@ -126,7 +126,7 @@ body{
     
 }
 
-@media (max-width:360px){
+@media (max-width:512px){
     .menu-tray{
         margin: 4% 0 0 0;
     }
