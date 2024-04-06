@@ -22,9 +22,7 @@ body{
 }
 
 /* left side */
-.bought-item-row {
-    position: relative;
-}
+
 .boughtItem-tray{
     border: 1px solid black;
     border-radius: 20px;
@@ -32,7 +30,7 @@ body{
     height: 100%;
     font-weight: 800;
     color: rgb(102, 51, 37);
-    margin: 0 4% 0 2%;
+    margin: 0 0 0 5%;
 
     
 }
@@ -68,12 +66,24 @@ body{
 .paymentButton:hover{
     background-color: rgb(70, 175, 70);
 }
+.deleteBtn{
+    border: none;
+    background-color: rgb(214, 45, 45);
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    padding: 9%;
+    width: auto;
+    height: 100%;
+}
 /* RIGHT SIDE */
 .menu-tray{
     border: 1px solid black;
     border-radius: 20px;
     padding: 2em;
     max-height: 100%;
+    margin: 0 0 0 5%;
+    
     
 }
 .card{
@@ -119,10 +129,8 @@ body{
 .btn-primary:hover{
     background-color: rgb(102, 51, 37) !important;
 }
-.menuCards{
-    position: relative;
-    /* display: flex; */
-    
+
+th{
     
 }
 
@@ -130,13 +138,26 @@ body{
     .menu-tray{
         margin: 4% 0 0 0;
     }
-    .col-7{
+    .col-6{
        flex: 0 0 auto;
        width: auto;
     }
-    .boughtItem-tray{
-        margin: 0%;
+    .boughtItem-tray {
+        overflow-x: auto;
+        max-width: auto;
+        margin-bottom: 20px;
+        margin: 0px 0px 0px 0;
     }
+
+    .boughtItem-tray table {
+        width: 100%;
+    }
+
+    .boughtItem-tray table th,
+    .boughtItem-tray table td {
+        white-space: nowrap;
+    }
+
     .status-circle{
         width: 2vw;
         height: 1vh;

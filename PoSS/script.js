@@ -1,5 +1,4 @@
-var items = [];
-
+items = []
 function addItem(itemName, itemPrice) {
     var itemRows = document.querySelectorAll('.boughtItem-tray tbody tr');
     var existingItem = Array.from(itemRows).find(function(row) {
@@ -10,6 +9,9 @@ function addItem(itemName, itemPrice) {
         var quantityInput = existingItem.cells[1].querySelector('.quantity-input');
         var quantity = parseInt(quantityInput.value) + 1;
         quantityInput.value = quantity;
+
+        var subtotal = quantity * itemPrice;
+        existingItem.cells[3].textContent = '₱' + subtotal.toFixed(2);
 
         var itemIndex = items.findIndex(function(element) {
             return element.name === itemName;
@@ -27,25 +29,36 @@ function addItem(itemName, itemPrice) {
         var newRow = document.createElement('tr');
 
         var itemNameCell = document.createElement('td');
-        itemNameCell.className = "boughtItem";
         itemNameCell.textContent = itemName;
 
         var itemQtyCell = document.createElement('td');
-        itemQtyCell.className = "text-center boughtQty";
         itemQtyCell.innerHTML = `<input type="number" class="form-control quantity-input" min="1" value="1">`;
 
         var itemPriceCell = document.createElement('td');
-        itemPriceCell.className = "boughtPrice text-center";
         itemPriceCell.textContent = '₱' + itemPrice.toFixed(2);
+
+        var itemSubtotalCell = document.createElement('td');
+        itemSubtotalCell.className = "boughtSubTotal";
+        var subtotal = item.quantity * item.price;
+        itemSubtotalCell.textContent = '₱' + subtotal.toFixed(2);
+
+        var deleteButtonCell = document.createElement('td');
+        var deleteButton = document.createElement('button');
+        deleteButton.className ="deleteBtn"
+        deleteButton.textContent = 'DELETE';
+        deleteButton.addEventListener('click', function() {
+            deleteItem(itemName);
+        });
+        deleteButtonCell.appendChild(deleteButton);
 
         newRow.appendChild(itemNameCell);
         newRow.appendChild(itemQtyCell);
         newRow.appendChild(itemPriceCell);
+        newRow.appendChild(itemSubtotalCell);
+        newRow.appendChild(deleteButtonCell);
 
         var boughtItemTray = document.querySelector('.boughtItem-tray tbody');
         boughtItemTray.appendChild(newRow);
-
-        updateTotal(); 
 
         var quantityInput = itemQtyCell.querySelector('.quantity-input');
         quantityInput.addEventListener('input', function() {
@@ -55,6 +68,25 @@ function addItem(itemName, itemPrice) {
             updateTotal();
         });
     }
+    updateTotal();
+}
+
+function deleteItem(itemName) {
+    var itemIndex = items.findIndex(function(element) {
+        return element.name === itemName;
+    });
+    items.splice(itemIndex, 1);
+
+    var itemRows = document.querySelectorAll('.boughtItem-tray tbody tr');
+    var targetRow = Array.from(itemRows).find(function(row) {
+        return row.cells[0].textContent.trim() === itemName;
+    });
+
+    if (targetRow) {
+        targetRow.remove();
+    }
+
+    updateTotal();
 }
 
 function updateSubtotal(itemName, subtotal) {
@@ -64,7 +96,7 @@ function updateSubtotal(itemName, subtotal) {
     });
 
     if (targetRow) {
-        targetRow.cells[2].textContent = '₱' + subtotal.toFixed(2);
+        targetRow.cells[3].textContent = '₱' + subtotal.toFixed(2);
     }
 }
 
@@ -72,7 +104,7 @@ function updateTotal() {
     var subtotalElements = document.querySelectorAll('.boughtItem-tray tbody tr');
     var total = 0;
     subtotalElements.forEach(function(row) {
-        var subtotal = parseFloat(row.cells[2].textContent.replace('₱', ''));
+        var subtotal = parseFloat(row.cells[3].textContent.replace('₱', ''));
         if (!isNaN(subtotal)) {
             total += subtotal;
         }
@@ -80,9 +112,8 @@ function updateTotal() {
     var orderTotalElement = document.querySelector('.orderTotal');
     orderTotalElement.textContent = 'TOTAL: ₱' + total.toFixed(2);
 }
-function displayReceipt() {
-    
 
+function displayReceipt() {
     var receiptContent = "<h4>Receipt</h4><hr>";
     items.forEach(function (item) {
         receiptContent += `<p>Item Name: ${item.name}</p>`;
@@ -114,7 +145,7 @@ function newOrder() {
 
     // Remove all dynamically created rows
     var boughtItemTray = document.querySelector('.boughtItem-tray');
-    var newRowElements = boughtItemTray.querySelectorAll('.row.ms-1');
+    var newRowElements = boughtItemTray.querySelectorAll('tbody tr');
     newRowElements.forEach(function(row) {
         row.remove();
     });
